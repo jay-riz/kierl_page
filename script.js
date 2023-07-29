@@ -13,17 +13,23 @@ function hide_indeedElementt() {
 }
 
 
-async function load() {
-    let url = 'https://pagasa.chlod.net/api/v1/bulletin/parse/TCB%2335F_egay.pdf';
-    let obj = null;
-    
-    try {
-        obj = await (await fetch(url)).json();
-    } catch(e) {
-        console.log('error');
-    }
-    
-    console.log(obj);
+function getJSONP(url, success) {
+
+    var ud = '_' + +new Date,
+        script = document.createElement('script'),
+        head = document.getElementsByTagName('head')[0] 
+               || document.documentElement;
+
+    window[ud] = function(data) {
+        head.removeChild(script);
+        success && success(data);
+    };
+
+    script.src = url.replace('callback=?', 'callback=' + ud);
+    head.appendChild(script);
+
 }
 
-load();
+getJSONP('https://pagasa.chlod.net/api/v1/bulletin/parse/TCB%2335F_egay.pdf', function(data){
+    console.log(data);
+});  
