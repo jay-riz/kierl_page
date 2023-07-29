@@ -13,23 +13,29 @@ function hide_indeedElementt() {
 }
 
 
-function getJSONP(url, success) {
+const starsName = 'vega';
+const api_key = '/7aiFJAxx0/UfD5oyAejBw==fnFPpGa8mkYCJbsY';
+const url = `https://api.api-ninjas.com/v1/stars?name=${starsName}`;
 
-    var ud = '_' + +new Date,
-        script = document.createElement('script'),
-        head = document.getElementsByTagName('head')[0] 
-               || document.documentElement;
+fetch(url, {
+    method: 'GET',
+    headers: {
+        'X-Api-Key': api_key,
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok.');
+    }
+    return response.json();
+})
+.then(result => {
+    console.log(result);
 
-    window[ud] = function(data) {
-        head.removeChild(script);
-        success && success(data);
-    };
+    document.getElementById("")
+})
+.catch(error => {
+    console.error('Error: ', error);
+});
 
-    script.src = url.replace('callback=?', 'callback=' + ud);
-    head.appendChild(script);
-
-}
-
-getJSONP('https://pagasa.chlod.net/api/v1/bulletin/parse/TCB%2335F_egay.pdf', function(data){
-    console.log(data);
-});  
