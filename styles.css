@@ -1,26 +1,105 @@
-body, ul {
+body {
     margin: 0;
     padding: 0;
 }
-
 nav {
-    background-color: #333;
-}
-
-.navbar {
     display: flex;
-    justify-content: space-around; /* to adjust the spacing between the links */
-    align-items: center;
-    height: 60px;
+    justify-content: space-between;
+    background-color: rgba(64,68,68, 0.5);
+    padding: 1.1rem;
+    height: max-content;
+    
 }
 
-.navbar a {
+.nv-title {
+    position: relative;
+    margin-top: 0;
+    padding-left: 2rem;
+    padding-bottom: 0;
+    /* top: .5em; */
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'REM', sans-serif;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    font-size: 2em;
+    box-sizing: border-box;
+    top: .75rem;
+    
 }
 
-.navbar a:hover {
-    background-color: #555;
+.nv-right {
+    position: relative;
+    left: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: .85em;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'REM', sans-serif;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: #ffffff83;
+    
+}
+
+.nav-links li a span {
+    transition: 0.5s;
+}
+
+.nav-links li a:hover span:nth-child(1){
+    margin-right: 10px; 
+    font-size: 1.2em;
+}
+
+.nav-links li a:hover span:nth-child(1)::after{
+    content: "*";
+}
+
+.nav-links li a:hover span:nth-child(2)::after{
+    margin-left: 40px;
+ 
+}
+
+.nav-links li a:hover span{
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 40px #fff,
+                 0 0 80px #fff,
+                 0 0 120px #fff,
+}
+
+
+  /* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #630606;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+/* Style the links inside the dropdown */
+
+#indeed {
+    position: absolute;
+    color: red;
+    top: 4rem;
+    height: 200px;
+    display: none;
+    background-color: blue;
 }
