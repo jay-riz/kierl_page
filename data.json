@@ -1,0 +1,177 @@
+{
+    "active": true,
+    "info": {
+        "title": "TROPICAL CYCLONE BULLETIN NO. 32 for Typhoon EGAY (DOKSURI)",
+        "count": 32,
+        "url": "https://pubfiles.pagasa.dost.gov.ph/tamss/weather/bulletin/TCB%2332_egay.pdf",
+        "final": false,
+        "issued": "2023-07-26T21:00:00.000Z",
+        "expires": "2023-07-27T03:00:00.000Z",
+        "summary": "TYPHOON EGAY CONTINUES TO WEAKEN OVER THE LUZON STRAIT WEST OF BATANES"
+    },
+    "cyclone": {
+        "name": "EGAY",
+        "internationalName": "DOKSURI",
+        "category": "Typhoon",
+        "prevailing": true,
+        "center": {
+            "lat": 20.2,
+            "lon": 120.1
+        },
+        "movement": "Northwestward at 15 km/h"
+    },
+    "signals": {
+        "1": {
+            "areas": {
+                "0": [
+                    {
+                        "name": "Isabela",
+                        "part": false
+                    },
+                    {
+                        "name": "Quirino",
+                        "part": false
+                    },
+                    {
+                        "name": "Nueva Vizcaya",
+                        "part": false
+                    },
+                    {
+                        "name": "Mountain Province",
+                        "part": false
+                    },
+                    {
+                        "name": "Ifugao",
+                        "part": false
+                    },
+                    {
+                        "name": "Benguet",
+                        "part": false
+                    },
+                    {
+                        "name": "Ilocos Sur",
+                        "part": true,
+                        "includes": {
+                            "type": "rest"
+                        }
+                    },
+                    {
+                        "name": "La Union",
+                        "part": false
+                    },
+                    {
+                        "name": "Pangasinan",
+                        "part": false
+                    },
+                    {
+                        "name": "Aurora",
+                        "part": false
+                    },
+                    {
+                        "name": "Nueva Ecija",
+                        "part": false
+                    },
+                    {
+                        "name": "Tarlac",
+                        "part": false
+                    },
+                    {
+                        "name": "Zambales",
+                        "part": true,
+                        "includes": {
+                            "type": "section",
+                            "term": "portion",
+                            "part": "northern",
+                            "objects": [
+                                "Botolan",
+                                "Iba",
+                                "Candelaria",
+                                "Cabangan",
+                                "Palauig",
+                                "Santa Cruz",
+                                "Masinloc"
+                            ]
+                        }
+                    }
+                ],
+                "1": [],
+                "2": []
+            }
+        },
+        "2": {
+            "areas": {
+                "0": [
+                    {
+                        "name": "Batanes",
+                        "part": false
+                    },
+                    {
+                        "name": "Cagayan",
+                        "part": false,
+                        "islands": [
+                            {
+                                "name": "Babuyan Island",
+                                "part": false
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Apayao",
+                        "part": false
+                    },
+                    {
+                        "name": "Kalinga",
+                        "part": false
+                    },
+                    {
+                        "name": "Abra",
+                        "part": false
+                    },
+                    {
+                        "name": "Ilocos Norte",
+                        "part": false
+                    },
+                    {
+                        "name": "Ilocos Sur",
+                        "part": true,
+                        "includes": {
+                            "type": "section",
+                            "term": "portion",
+                            "part": "northern and central",
+                            "objects": [
+                                "Magsingal",
+                                "San Esteban",
+                                "Banayoyo",
+                                "Burgos",
+                                "City of Candon",
+                                "Santiago",
+                                "San Vicente",
+                                "Santa Catalina",
+                                "Lidlidda",
+                                "Nagbukel",
+                                "Sinait",
+                                "San Ildefonso",
+                                "Galimuyod",
+                                "City of Vigan",
+                                "San Emilio",
+                                "Cabugao",
+                                "Caoayan",
+                                "San Juan",
+                                "Santa",
+                                "Bantay",
+                                "Santo Domingo",
+                                "Santa Maria",
+                                "Narvacan"
+                            ]
+                        }
+                    }
+                ],
+                "1": [],
+                "2": []
+            }
+        },
+        "3": null,
+        "4": null,
+        "5": null
+    }
+}
