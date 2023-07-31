@@ -1,7 +1,30 @@
 body {
     margin: 0;
-    height: 500vh;
+    height: 200vh;
+    background-color: #e0dcdc;
+
+
+    
 }
+
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:rgb(55, 209, 209);
+    border-radius: 10px;
+  }
+
+
 nav {
     
     display: flex;
@@ -61,21 +84,21 @@ nav {
     transition: 0.5s;
 }
 
-.nav-links li a:hover span:nth-child(1){
+.nav-links li a:hover .spanner:nth-child(1){
     margin-right: 10px; 
     font-size: 1.2em;
 }
 
-.nav-links li a:hover span:nth-child(1)::after{
+.nav-links li a:hover .spanner:nth-child(1)::after{
     content: "*";
 }
 
-.nav-links li a:hover span:nth-child(2)::after{
+.nav-links li a:hover .spanner:nth-child(2)::after{
     margin-left: 40px;
  
 }
 
-.nav-links li a:hover span{
+.nav-links li a:hover .spanner{
     color: #fff;
     font-weight: 700;
     text-shadow: 0 0 10px #fff,
@@ -94,42 +117,52 @@ nav {
 #indeed {
     position: absolute;
     color: #000;
-   
-    height: 200px;
+    overflow-y: auto;
+    max-height: 200px;
+    
     display: none;
     background-color: rgba(64,68,68, 0.5);
-    min-width: 200px;
-    max-width: 200px;
+    max-width: 220px;
     margin: 0;
 }
 
+
+#indeed::-webkit-scrollbar {
+    width: 8px;
+}
+
+#indeed::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+#indeed::-webkit-scrollbar-thumb {
+    background: rgb(55, 209, 209);
+    border-radius: 10px;
+  }
+
 #indeed ul li {
-    list-style: disc;   
-    margin-left: 1em;
-    margin-right: 1em;
+   
+}
+
+
+
+
+#API {
     word-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'REM', sans-serif;
+    margin-bottom: .75em;
+    font-size: 15px;
+    /* height: 300px; */
+    padding-top: .65em;
+    font-weight: 500;
+    padding-left: 1em;
+    color: rgb(55, 209, 209);
+
 }
 
-.parentContainer {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
 
-.leftBox, .rightBox {
-    box-sizing: border-box;
-    height: 200px;
-    /* background-color: aqua; */
-    margin: 1rem;
-    box-sizing: border-box;
-    border: solid 2px red;
-}
-
-/* @media (max-width: 1150px){
-    .nav-links {
-        padding-right: 10rem;
-    }
-} */
 
 @media (max-width: 586px){
     nav {
@@ -148,13 +181,16 @@ nav {
 }
 
 .empty-div {
-    height: 78px;
+    height: 120px;
 }
 
 .empty-div1 {
-    height: 120px;
+    height: 160px;
     display: none;
 }
+
+
+
 
 @media (max-width: 360px){
     .nv-right {
@@ -163,9 +199,10 @@ nav {
     #indeed {
         bottom: 60px;
     }
+
 }
     
-@media (max-width: 400px){
+@media (max-width: 420px){
     .empty-div {
         display: none;
     }
@@ -173,4 +210,79 @@ nav {
     .empty-div1 {
         display: block;
     }
+}
+
+@-webkit-keyframes slidein {
+    from {background-position: top; background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+    }
+    
+    @keyframes slidein {
+    from {background-position: top;background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+    
+    }
+    
+
+
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    color: white;
+    font-size: 12px;
+    background-color: rgba(64,68,68, 0.5);
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+}
+
+
+#top {
+    top: -40px;
+    left: -50%;
+}
+
+.repo-class:hover .tooltip-text {
+    visibility: visible;
+    
+}
+
+.repo-class:hover {
+    font-size: 1.2em;
+    color: rgb(43, 211, 211);
+    font-weight: 700;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 40px #fff,
+                 0 0 80px #fff,
+                 0 0 120px #fff,
+    
+}
+
+.spannerCon:hover {
+    font-size: 2em;
+    color: rgb(43, 211, 211);
+    font-weight: 700;
+    text-shadow: 0 0 10px aqua,
+                 0 0 20px aqua,
+                 0 0 40px aqua,
+                 0 0 80px aqua,
+                 0 0 120px aqua,
+}
+
+.flow-container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.row {
+    height: 300px;
+    width: 88%;
+    margin: 2rem;
+    padding: 0;
 }
