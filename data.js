@@ -24,7 +24,7 @@ fetch(urls)
         SayYorNO = "Yes";
     }
     else{
-        SayYorNO = "False";
+        SayYorNO = "No";
     }
 
     const html = `<p style="text-align: center; margin: 0; font-weight: 700;">Is there typhoon?</p> <p style="text-align: center; margin: 0; font-weight: 500;">Cyclone</p> <li id="API">Name: ${name}</li> <li id="API">Category: ${category}</li> <li id="API">Prevailing?: ${SayYorNO}</li> <li id="API">Latitude: ${lat}</li> <li id="API">Longtitude: ${lon}</li> <li id="API">Movement: ${movement}</li> <li id="API">Issued: ${issued}</li> <li style="text-transform: lowercase ; color: #ff2400;" id="API">Summary: ${summary}</li> <li id="API" style="color: #000 !important;"> Fetch through json (data.json on my github repo.) </li>`
@@ -40,23 +40,3 @@ fetch(urls)
 
 
 
-
-// async function fetchData(){
-//   const options = {
-//       method: 'GET',
-//       headers: {
-//           'X-RapidAPI-Key': '80a731deeamsh43949c48646ca17p1d870djsn1d59e25a9d8d',
-//           'X-RapidAPI-Host': 'api-basketball.p.rapidapi.com'
-//       }
-//   };
-
-//   try {
-//       const response = await fetch(url, options);
-//       const result = await response.text();
-//       console.log(result);
-//   } catch (error) {
-//       console.error(error);
-//   }
-
-
-// }
