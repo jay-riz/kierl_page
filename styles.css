@@ -235,6 +235,8 @@ nav {
     background-color: rgba(64,68,68, 0.5);
     border-radius: 10px;
     padding: 10px 15px 10px 15px;
+    top: -2.99em;
+    left: -4em;
 }
 
 
@@ -285,4 +287,44 @@ nav {
     width: 88%;
     margin: 2rem;
     padding: 0;
+}
+
+@media (min-width: 360px){
+    .nv-title {
+        font-size: 1.76em;
+    }
+
+    .nav-links {
+        padding-right: 1.40;
+        padding-left: .23em;
+    }
+
+    #kirf-section {
+        padding-right: 2em;
+    }
+
+    #indeed {
+        bottom: -213px;
+    }
+}
+
+
+@media (min-width: 320px) {
+    .nv-title {
+        font-size: 1.5em;
+    }
+
+    #indeed {
+        bottom: -203px;
+        left: 100px
+    }
+
+    #kirf-section {
+        padding-right: 3em;
+    }
+
+    .tooltip-text {
+        top: -2.99em;
+        left: 4em;
+    }
 }
